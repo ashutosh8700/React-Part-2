@@ -1,6 +1,7 @@
 // State Varaible
 import './App.css'
 import  {useState} from 'react'; // importing state
+import Avatar from './Avatar';
 let z = 0; // z is global variable hence on each render  its getting change
 function App() {
   // let count = 0;
@@ -55,6 +56,11 @@ function App() {
       {/* button to add new todo */}
     <button onClick={() => setTodos([...todos,'todo3']) } >Click Me </button>  
 
+       <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU" width="100px" height="100px" />
+       <Avatar/>
+       <Avatar/>
+       <div>hello</div>
+       <div>hi </div>
     </>
   )
 }
