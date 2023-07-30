@@ -27,8 +27,15 @@ function App() {
     console.log("Clicked on Decrement",counter);
     
   }
+  const [todos,setTodos] = useState(['todo1','todo2']);
+
+
   return (
     <>
+    <div>
+      {/* condition rendering  */}
+      Value of Count: {count}  which is {(count %2 == 0 ) ? 'Even' : 'Odd'  } value
+    </div>
      <p>z:{z}</p> 
       <div>
       <p>Value of count is {count}</p>
@@ -41,6 +48,13 @@ function App() {
       </div>
       <button onClick={clickedCounterIncrement}>Inc</button>
       <button onClick={clickedCounterDecrement}>Dec</button>
+
+    
+      <h1>Todo List</h1>
+    {todos.map((value) =>  <li>{value}</li>)}
+      {/* button to add new todo */}
+    <button onClick={() => setTodos([...todos,'todo3']) } >Click Me </button>  
+
     </>
   )
 }
